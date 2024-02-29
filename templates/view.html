@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Prediction - GemProphet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>View Prediction</h1>
+    </header>
+    <nav>
+        <ul>
+            <br>
+            <a class="btn btn-outline-dark" href="./" role="button">Back Home</a>
+        </ul>
+    </nav>
+    <main style="margin-left: 4%;">
+        <h1>Prediction History</h1>
+        
+        <table style="border-style: dashed;white-space: nowrap;">
+            <thead>
+                <tr>
+                    <th>Carat</th>
+                    <th></th>
+                    <th>Carat</th>
+                    <th></th>
+                    <th>Carat</th>
+                    <th></th>
+                    <th>Carat</th>
+                    <th></th>
+                    <th>Carat</th>
+                    <th></th>
+                    <th>Carat</th>
+                    <th></th>
+                    <th>Carat</th>
+                    <th></th>
+                    <th>Carat</th>
+                    <th></th>
+                    <th>Carat</th>
+                    <th></th>
+                    <th>Carat</th>
+                    <th></th>
+                    <th>Carat</th>
+                    <th></th>
+                    <th>Carat</th>
+                    <th></th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% set outerList = [] %}
+
+                {% for item in data %}
+                    <tr>
+
+                        {% for key,value in firstnames.items() %}
+
+                            {% if outerList|length == key %}
+                                <td>{{value}}</td>
+                            {% endif %}
+
+                        {% endfor %}
+
+                            <td></td>
+                            <td>{{ item[0] }}</td>
+                            <td></td>
+                            <td>{{ item[1] }}</td>
+                            <td></td>
+                            <td>{{ item[2] }}</td>
+                            <td></td>
+                            <td>{{ item[3] }}</td>
+                            <td></td>
+                            <td>{{ item[4] }}</td>
+                            <td></td>
+                            <td>{{ item[5] }}</td>
+                            <td></td>
+                            <td>{{ item[6] }}</td>
+                            <td></td>
+                            <td>{{ item[7] }}</td>
+                            <td></td>
+                            <td>{{ item[8] }}</td>
+                            <td></td>
+                            <td>{{ item[9] }}</td>
+                            <td></td>
+                            <td>{{ item[10] }}</td>
+                            <td></td>
+                            <td>{{ item[11] }}</td>
+                    </tr>
+                    {% set _ = outerList.append(1) %}
+                {% endfor %}
+            </tbody>
+
+        </table>
+    </main>
+
+    <style>
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    background-image: url('https://img.freepik.com/free-vector/abstract-white-background_23-2148810889.jpg?t=st=1696152845~exp=1696153445~hmac=dec199b272171a5f425b6751cdc6b3ca4548fca630081b4dd3322ff1e0336a94');
+    background-size: 150% 80%;
+}
+
+
+header {
+    background-color: #D97706;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5;
+
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+main {
+    max-width: 1390px;
+    max-height: 800;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#overview{
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+
+}
+
+#overview p {
+    line-height: 1.5;
+}
+
+
+#overview h3 {
+    text-align: center;
+}
+
+#overview ul {
+    text-align: left;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#overview ul li {
+    margin-bottom: 10px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 0;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
+
+    </style>
+
+    <script>
+
+        // script.js
+document.addEventListener("DOMContentLoaded", function () {
+    // Your JavaScript code here
+});
+
+
+    </script>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
